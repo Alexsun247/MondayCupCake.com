@@ -1,0 +1,194 @@
+/* =========================
+   General Page Style
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #0C243C;
+}
+
+
+/* =========================
+   Gallery Header
+========================= */
+
+.gallery-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.gallery-header h1 {
+    font-size: 3em;
+    color: #0C243C;
+    margin-bottom: 15px;
+}
+
+.gallery-header p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+
+ 
+}
+
+
+/* =========================
+   Gallery Container
+========================= */
+
+.gallery-container {
+    width: 90%;
+    max-width: 1400px;
+    margin:0 auto 70px;
+}
+
+
+/* =========================
+   Masonry Gallery
+========================= */
+
+.masonry-gallery {
+    column-count: 4;
+    column-gap: 18px;
+}
+
+
+/* =========================
+   Gallery Item
+========================= */
+
+.gallery-item {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    break-inside: avoid;
+
+    overflow: hidden;
+
+    border-radius: 40px;
+
+    background-color: rgba(78, 16, 16, 0.733);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Gallery Images
+========================= */
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Zoom Image on Hover */
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   Image Overlay
+========================= */
+
+.gallery-overlay {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 30px 15px 15px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(247, 113, 4, 0.75)
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Show overlay on mouse hover */
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 50;
+}
+
+
+.gallery-overlay h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .masonry-gallery {
+        column-count: 3;
+    }
+
+}
+
+
+/* Small Tablet */
+
+@media (max-width: 750px) {
+
+    .masonry-gallery {
+        column-count: 2;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .masonry-gallery {
+        column-count: 1;
+    }
+
+    .gallery-header h1 {
+        font-size: 2.2em;
+    }
+
+    .gallery-container {
+        width: 94%;
+    }
+
+}
