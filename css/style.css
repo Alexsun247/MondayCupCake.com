@@ -1,0 +1,535 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    min-height: 70px;
+    background-color: chocolate;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+}
+
+.navbar .nav-link {
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc0cb;
+}
+
+
+/* =========================================
+   HOME PAGE HERO / PHOTO ROTATOR
+   30% OF VIEWPORT HEIGHT
+========================================= */
+
+#homeHero {
+    width: 100%;
+    height: 76vh;
+    overflow: hidden;
+}
+
+#cakeCarousel,
+#cakeCarousel .carousel-inner,
+#cakeCarousel .carousel-item {
+    width: 100%;
+    height: 76vh;
+}
+
+.hero-media {
+    width: 100%;
+    height: 76vh;
+    object-fit: cover;
+    object-position: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-caption {
+    position: absolute;
+
+    top: 50%;
+    bottom: auto;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+.hero-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-caption p {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================
+   HOME INTRO
+========================================= */
+
+.home-intro {
+    max-width: 800px;
+}
+
+
+/* =========================================
+   HOME CARDS
+========================================= */
+
+.home-card {
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.home-card img {
+    height: 240px;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.home-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   INNER PAGE HEADER
+   ABOUT / GALLERY / CONTACT
+========================================= */
+
+.page-header {
+    position: relative;
+
+    width: 100%;
+    height: 25vh;
+
+    min-height: 200px;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.page-header-content {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+    text-align: center;
+}
+
+.page-header-content h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================
+   ABOUT PAGE TABLE
+========================================= */
+
+.price-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.price-table thead {
+    background-color: #212529;
+    color: white;
+}
+
+.price-table th,
+.price-table td {
+    padding: 18px;
+    vertical-align: middle;
+    border: none;
+}
+
+.price-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background-color: #eef7ff;
+}
+
+.price-table tbody tr {
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.price-table tbody tr:hover {
+    background-color: #dceeff;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay h3 {
+    color: white;
+
+    transform: translateY(20px);
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-overlay i {
+    color: white;
+
+    font-size: 2rem;
+
+    margin-top: 10px;
+
+    transform: translateY(20px);
+
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.75);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay h3,
+.gallery-item:hover .gallery-overlay i {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-box {
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-control,
+.form-select {
+    min-height: 48px;
+
+    border-radius: 8px;
+}
+
+textarea.form-control {
+    min-height: 140px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #555;
+
+    box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.12);
+}
+
+
+/* =========================================
+   FADE IN ON SCROLL
+========================================= */
+
+.fade-section {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.fade-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer a {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+    display: inline-block;
+}
+
+footer a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero-caption h2 {
+        font-size: 2rem;
+    }
+
+    .hero-caption p {
+        font-size: 1rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    #homeHero,
+    #cakeCarousel,
+    #cakeCarousel .carousel-inner,
+    #cakeCarousel .carousel-item,
+    .hero-media {
+        height: 30vh;
+    }
+
+    .hero-caption {
+        width: 85%;
+        left: 7.5%;
+        right: auto;
+    }
+
+    .hero-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-caption p {
+        font-size: 0.9rem;
+    }
+
+    .hero-caption .btn {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    .page-header {
+        height: 22vh;
+        min-height: 170px;
+    }
+
+    .page-header-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-card img {
+        height: 220px;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero-caption p {
+        display: none;
+    }
+
+    .hero-caption h2 {
+        font-size: 1.3rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 1.7rem;
+    }
+}
+
+
+
+
+
+/* =========================================
+   ACCESSIBILITY - CONTRAST FIX
+========================================= */
+
+.navbar {
+    background-color: #212529;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Hero text accessibility */
+.hero-caption h2,
+.hero-caption p {
+    color: #ffffff;
+}
+
+/* Stronger overlay for text readability */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
