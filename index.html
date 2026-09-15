@@ -1,76 +1,60 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
 <head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sweet Cake | Home</title>
+
+  <!-- Bootstrap 5 CSS -->
+
+ <link rel="stylesheet" href="css/style.css">
 
 
-<meta charset="UTF-8">
 
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  >
 
-
-<title>
-Sweet Cake | About Us
-</title>
-
-
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-rel="stylesheet"
->
-
-
-<link rel="stylesheet" href="css/style.css">
-
-
+  <!-- Custom CSS -->
+ 
 </head>
-
 
 <body>
 
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
 
+      <a class="navbar-brand fw-bold" href="index.html">
+        Sweet Cake
+      </a>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="mainNavbar">
 
-<div class="container">
-
-
-<a
-class="navbar-brand fw-bold"
-href="index.html"
->
-
-Sweet Cake
-
-</a>
-
-
-<button
-class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#mainNavbar"
->
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-
-<div
-class="collapse navbar-collapse"
-id="mainNavbar"
->
-
-
-  <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
 
           <li class="nav-item">
             <a
@@ -102,259 +86,612 @@ id="mainNavbar"
 
         </ul>
 
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO CAROUSEL
+  ========================== -->
+  <header id="homeHero">
+
+    <div
+      id="cakeCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+
+        <button
+          type="button"
+          data-bs-target="#cakeCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#cakeCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#cakeCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#cakeCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+
+      </div>
+
+
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 - Video -->
+        <div class="carousel-item active">
+
+          <video
+            class="hero-media"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source
+              src="videos/cake-cutting.mp4"
+              type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="hero-overlay"></div>
+
+          <div class="carousel-caption hero-caption">
+            <h2>
+              Celebrate Every Special Moment
+            </h2>
+
+            <p>
+              Beautiful handmade cakes created for unforgettable celebrations.
+            </p>
+
+            <a
+              href="contact.html"
+              class="btn btn-light btn-lg mt-2"
+            >
+              Order Your Cake
+            </a>
+          </div>
+
+        </div>
+
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+
+          <img
+            src="images/birthday-cake.jpg"
+            class="d-block w-100 hero-media"
+            alt="Colourful birthday cake"
+          >
 
-</div>
+          <div class="hero-overlay"></div>
+
+          <div class="carousel-caption hero-caption">
+            <h2>
+              Birthday Cakes
+            </h2>
 
+            <p>
+              Make every birthday sweeter with a personalised cake.
+            </p>
 
-</div>
+            <a
+              href="gallery.html"
+              class="btn btn-light btn-lg mt-2"
+            >
+              View Gallery
+            </a>
+          </div>
+
+        </div>
 
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
 
-</nav>
+          <img
+            src="images/wedding-cake.jpg"
+            class="d-block w-100 hero-media"
+            alt="Elegant wedding cake"
+          >
 
+          <div class="hero-overlay"></div>
 
+          <div class="carousel-caption hero-caption">
+            <h2>
+              Wedding Cakes
+            </h2>
 
-<header
-class="page-header"
-style="background-image: url('images/about-header.jpg');"
->
+            <p>
+              Elegant designs created especially for your wedding day.
+            </p>
 
+            <a
+              href="contact.html"
+              class="btn btn-light btn-lg mt-2"
+            >
+              Request a Quote
+            </a>
+          </div>
 
-<div class="page-header-content">
+        </div>
 
 
-<h1>
+        <!-- Slide 4 -->
+        <div class="carousel-item">
 
-About Us
+          <img
+            src="images/celebration-cake.jpg"
+            class="d-block w-100 hero-media"
+            alt="Celebration cake for a special event"
+          >
 
-</h1>
+          <div class="hero-overlay"></div>
 
+          <div class="carousel-caption hero-caption">
+            <h2>
+              Cakes for Every Occasion
+            </h2>
 
-<p>
+            <p>
+              Engagements, anniversaries, graduations and special events.
+            </p>
 
-Fresh cakes made with care.
+            <a
+              href="aboutus.html"
+              class="btn btn-light btn-lg mt-2"
+            >
+              Learn More
+            </a>
+          </div>
 
-</p>
+        </div>
 
+      </div>
 
-</div>
 
+      <!-- Previous Button -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#cakeCarousel"
+        data-bs-slide="prev"
+      >
 
-</header>
+        <span
+          class="carousel-control-prev-icon"
+          aria-hidden="true"
+        ></span>
 
+        <span class="visually-hidden">
+          Previous
+        </span>
 
+      </button>
 
-<section class="py-5 fade-section">
 
+      <!-- Next Button -->
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#cakeCarousel"
+        data-bs-slide="next"
+      >
 
-<div class="container">
+        <span
+          class="carousel-control-next-icon"
+          aria-hidden="true"
+        ></span>
 
+        <span class="visually-hidden">
+          Next
+        </span>
 
-<div class="row justify-content-center">
+      </button>
 
+    </div>
 
-<div class="col-lg-9 text-center">
+  </header>
 
 
-<h2>
+  <!-- =========================
+       INTRODUCTION
+  ========================== -->
+  <main>
 
-Our Story
+    <section class="py-5 fade-section">
 
-</h2>
+      <div class="container text-center">
 
+        <h1 class="display-5 fw-bold mb-3">
+          Welcome to Sweet Cake
+        </h1>
 
-<p class="lead">
+        <p class="lead mx-auto home-intro">
+          We create fresh, handmade cakes for birthdays,
+          weddings, anniversaries and other special occasions.
+          Every cake is prepared with care and can be customised
+          to match your celebration.
+        </p>
 
-Sweet Cake creates handmade cakes for birthdays,
-weddings, anniversaries and other celebrations.
+        <a
+          href="aboutus.html"
+          class="btn btn-dark mt-3"
+        >
+          About Our Cakes
+        </a>
 
-</p>
+      </div>
 
+    </section>
 
-<p>
 
-Our goal is to provide fresh and attractive cakes
-that match the style and theme of each customer's
-special event.
+    <!-- =========================
+         CAKE CATEGORIES
+    ========================== -->
+    <section class="py-5 bg-light fade-section">
 
-</p>
+      <div class="container">
 
+        <div class="text-center mb-5">
 
-</div>
+          <h2 class="fw-bold">
+            Our Cake Collection
+          </h2>
 
+          <p class="text-muted">
+            Choose the perfect cake for your special occasion.
+          </p>
 
-</div>
+        </div>
 
 
-</div>
+        <div class="row g-4">
 
+          <!-- Birthday Cake -->
+          <div class="col-12 col-md-6 col-lg-4">
 
-</section>
+            <div class="card h-100 border-0 shadow-sm home-card">
 
+              <img
+                src="images/birthday-cake.jpg"
+                class="card-img-top"
+                alt="Birthday cake"
+              >
 
+              <div class="card-body text-center">
 
-<section class="py-5 bg-light fade-section">
+                <h3 class="h4">
+                  Birthday Cakes
+                </h3>
 
+                <p class="card-text">
+                  Fun, colourful and personalised cakes
+                  for birthdays of all ages.
+                </p>
 
-<div class="container">
+                <a
+                  href="gallery.html"
+                  class="btn btn-outline-dark"
+                >
+                  See Cakes
+                </a>
 
+              </div>
+            </div>
 
-<h2 class="text-center mb-4">
+          </div>
 
-Cake Sizes and Prices
 
-</h2>
+          <!-- Wedding Cake -->
+          <div class="col-12 col-md-6 col-lg-4">
 
+            <div class="card h-100 border-0 shadow-sm home-card">
 
-<div class="table-responsive">
+              <img
+                src="images/wedding-cake.jpg"
+                class="card-img-top"
+                alt="Wedding cake"
+              >
 
+              <div class="card-body text-center">
 
-<table class="table price-table">
+                <h3 class="h4">
+                  Wedding Cakes
+                </h3>
 
+                <p class="card-text">
+                  Elegant wedding cakes designed
+                  to complement your special day.
+                </p>
 
-<thead>
+                <a
+                  href="gallery.html"
+                  class="btn btn-outline-dark"
+                >
+                  See Cakes
+                </a>
 
+              </div>
+            </div>
 
-<tr>
+          </div>
 
 
-<th>
-Cake Size
-</th>
+          <!-- Celebration Cake -->
+          <div class="col-12 col-md-6 col-lg-4">
 
+            <div class="card h-100 border-0 shadow-sm home-card">
 
-<th>
-Serves
-</th>
+              <img
+                src="images/celebration-cake.jpg"
+                class="card-img-top"
+                alt="Celebration cake"
+              >
 
+              <div class="card-body text-center">
 
-<th>
-Price
-</th>
+                <h3 class="h4">
+                  Celebration Cakes
+                </h3>
 
+                <p class="card-text">
+                  Special cakes for graduations,
+                  anniversaries, engagements and events.
+                </p>
 
-<th>
-Preparation Time
-</th>
+                <a
+                  href="gallery.html"
+                  class="btn btn-outline-dark"
+                >
+                  See Cakes
+                </a>
 
+              </div>
+            </div>
 
-</tr>
+          </div>
 
+        </div>
+      </div>
 
-</thead>
+    </section>
 
 
-<tbody>
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+    <section class="py-5 fade-section">
 
+      <div class="container">
 
-<tr>
+        <div class="text-center mb-5">
 
-<td>Small</td>
+          <h2 class="fw-bold">
+            Why Choose Us?
+          </h2>
 
-<td>6 - 8 people</td>
+        </div>
 
-<td>$45</td>
 
-<td>1 - 2 days</td>
+        <div class="row g-4 text-center">
 
-</tr>
+          <div class="col-12 col-md-4">
 
+            <div class="p-4">
 
-<tr>
+              <i class="bi bi-cake2 fs-1 mb-3"></i>
 
-<td>Medium</td>
+              <h3 class="h5">
+                Freshly Made
+              </h3>
 
-<td>10 - 15 people</td>
+              <p>
+                Our cakes are freshly prepared
+                for each customer and each event.
+              </p>
 
-<td>$70</td>
+            </div>
 
-<td>2 days</td>
+          </div>
 
-</tr>
 
+          <div class="col-12 col-md-4">
 
-<tr>
+            <div class="p-4">
 
-<td>Large</td>
+              <i class="bi bi-palette fs-1 mb-3"></i>
 
-<td>20 - 25 people</td>
+              <h3 class="h5">
+                Custom Designs
+              </h3>
 
-<td>$110</td>
+              <p>
+                Choose your preferred colours,
+                theme, size and decoration.
+              </p>
 
-<td>2 - 3 days</td>
+            </div>
 
-</tr>
+          </div>
 
 
-<tr>
+          <div class="col-12 col-md-4">
 
-<td>Extra Large</td>
+            <div class="p-4">
 
-<td>30 - 40 people</td>
+              <i class="bi bi-heart fs-1 mb-3"></i>
 
-<td>$160</td>
+              <h3 class="h5">
+                Made with Care
+              </h3>
 
-<td>3 - 4 days</td>
+              <p>
+                Every cake is created with
+                attention to detail and presentation.
+              </p>
 
-</tr>
+            </div>
 
+          </div>
 
-<tr>
+        </div>
 
-<td>Wedding Cake</td>
+      </div>
 
-<td>50+ people</td>
+    </section>
+	  
+	  
+	  
+	  
+	  
+	      <!-- =========================
+         OPENING HOURS
+    ========================== -->
+    <section class="py-5 bg-light fade-section" >
 
-<td>From $250</td>
+      <div class="container text-center" >
 
-<td>5 - 7 days</td>
+        <h2 class="fw-bold mb-4">
+          Opening Hours
+        </h2>
 
-</tr>
+        <div class="mx-auto" style="max-width: 500px;">
 
+          <p class="mb-2">
+            <strong>Monday – Friday:</strong> 9:00 am – 5:00 pm
+          </p>
 
-</tbody>
+          <p class="mb-2">
+            <strong>Saturday:</strong> 9:00 am – 3:00 pm
+          </p>
 
+          <p class="mb-0">
+            <strong>Sunday:</strong> 9:00 am – 12 noon
+          </p>
 
-</table>
+        </div>
 
+      </div>
 
-</div>
+    </section>
 
 
-</div>
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+    <section class="py-5 bg-dark text-white fade-section">
 
+      <div class="container text-center">
 
-</section>
+        <h2 class="fw-bold">
+          Need a Cake for Your Next Celebration?
+        </h2>
 
+        <p class="lead mt-3">
+          Contact us and tell us about your event,
+          preferred cake size and design.
+        </p>
 
+        <a
+          href="Contact_Us.html"
+          class="btn btn-light btn-lg mt-3"
+        >
+          Contact Us
+        </a>
 
-<footer class="bg-dark text-white py-4">
+      </div>
 
+    </section>
 
-<div class="container text-center">
+  </main>
 
 
-<p class="mb-0">
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="bg-black text-white py-4">
 
-© 2026 Sweet Cake. All Rights Reserved.
+    <div class="container">
 
-</p>
+      <div class="row align-items-center">
 
+        <div class="col-12 col-md-6 text-center text-md-start">
 
-</div>
+          <p class="mb-0">
+            &copy; 2026 Sweet Cake. All rights reserved.
+          </p>
 
+        </div>
 
-</footer>
+        <div class="col-12 col-md-6 text-center text-md-end mt-3 mt-md-0">
 
+          <a
+            href="#"
+            class="text-white me-3"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
 
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-</script>
+          <a
+            href="#"
+            class="text-white me-3"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
 
+          <a
+            href="#"
+            class="text-white"
+            aria-label="Email"
+          >
+            <i class="bi bi-envelope"></i>
+          </a>
 
-<script src="js/main.js"></script>
+        </div>
 
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
 
 </body>
-
-
 </html>
